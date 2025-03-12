@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Checkout RegRepo
         uses: actions/checkout@v2
-        if: ${{ !vars.skipCheckout }} 
+        if: ${{ !vars.SKIPCHECKOUT }} 
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.ref }}
