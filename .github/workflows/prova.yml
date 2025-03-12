@@ -2,18 +2,6 @@ name: Create pre-release
 on:
   workflow_dispatch:
 jobs:
-  debug:
-    name: Debug data
-    runs-on: ubuntu-latest
-    steps:
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
-      - name: Dump Variables
-        env:
-          VARIABLES: ${{ inputs.vars }}
-        run: echo "$VARIABLES"
   checkout:
     name: Checkout
     runs-on: ubuntu-latest
